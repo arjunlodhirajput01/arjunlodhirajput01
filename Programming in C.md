@@ -104,6 +104,23 @@ Student Percentage is: 52.00
 
 Q4. Temperature of a city in fahrenheit degree is input through the keyboard. Write a program to convert this temperature into centigrade degree.
 
+#include<stdio.h>
 
+int main()
+{
+    float f, c;
+    printf("Enter Temperature in Fahrenheit: ");
+    scanf("%f", &f);
+
+    c = (f-32)*5/9;
+
+    printf("The Temperature in Centigrade Degree: %.2f", c);
+    return (0);
+}
+
+Output
+
+Enter Temperature in Fahrenheit: 98
+The Temperature in Centigrade Degree: 36.67
  
 
