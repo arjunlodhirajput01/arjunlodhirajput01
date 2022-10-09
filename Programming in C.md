@@ -37,3 +37,73 @@ int main(){
     getc;
     return 0;
 }
+
+Q2. The distance between two cities (in km.) is input through the keyboard.
+wrtie a program to convert and print this distance in meters, feets, inches and centimenters.
+
+#include<stdio.h>
+int main(){
+    float Kilometers, Meters, Feets, Inches, Centimeters;
+    printf("Enter the Distance is Kilometers :");
+    scanf("%f", &Kilometers);
+    
+    Meters = Kilometers * 1000;
+    Feets = Kilometers *  3280.84 * 100;
+    Inches = Kilometers * 39370.1;
+    Centimeters  =  Kilometers * 100000;
+    
+    printf("The Distance in Meters is : %f \n", Meters);
+    printf("The Distance in Feets is : %f \n", Feets);
+    printf("The Distance in Inches is : %f \n", Inches);
+    printf("The Distance in Centimeters is : %f \n", Centimeters);
+    return 0;
+}
+
+Output 
+
+Enter the Distance is Kilometers :2
+The Distance in Meters is : 2000.000000 
+The Distance in Feets is : 656168.000000 
+The Distance in Inches is : 78740.203125 
+The Distance in Centimeters is : 200000.000000 
+
+Q3. The marks obtained by a student in five different subjects are input thorugh the keyboard, find out the aggregate marks and percentage marks obtained by the student. Assume that the maximum marks that can be obtained by a student in each subject is 100.
+
+#include<stdio.h>
+int main(){
+    float total, english, hindi, maths, science, arts, percentage;
+    
+    printf("Enter the English Marks of Student :");
+    scanf("%d", &english);
+    printf("Enter the Hindi Marks of Student :");
+    scanf("%d", &hindi);
+    printf("Enter the Maths Marks of Student :");
+    scanf("%d", &maths);
+    printf("Enter the Science Marks of Student :");
+    scanf("%d", &science);
+    printf("Enter the Marks of Arts :");
+    scanf("%d", &arts);
+    
+    total = hindi + english + maths + science + arts;
+    percentage = total / 5;
+    
+    printf("The total marks of Student is: %d \n", total);
+    printf("Student Percentage is: %0.2f \n", percentage);
+    return 0;
+}
+
+Output
+
+Enter the English Marks of Student :50
+5Enter the Hindi Marks of Student :50
+Enter the Maths Marks of Student :50
+Enter the Science Marks of Student :50
+Enter the Marks of Arts :60
+The total marks of Student is: 260.000000 
+Student Percentage is: 52.00 
+
+Q4. Temperature of a city in fahrenheit degree is input through the keyboard. Write a program to convert this temperature into centigrade degree.
+
+
+ 
+
