@@ -178,5 +178,115 @@ Output
 Enter the Number N :9
 Number is odd
 
+Example 1.1
+
+Develop a C program to find the largest of the three given numbers.
+
+Steps:
+1. Input three numbers a,b,c
+2. (find the larger of two numbers and store the result in new variable, big.)
+  IF(a>b) THEN big a ELSE big = b
+3. (Compare the big and Third number, c, to get the result)
+. IF (c>big) THEN big = c.
+4.Output big 
+5.STOP
+
+#include<stdio.h>
+int main(){
+    int a,b,c, big;
+    printf("Write the Number for a b & c \n");
+    scanf("%d %d %d", &a, &b, &c);
+    
+    if(a > b) big = a; else big = b;
+    
+    if(c > big) big = c;
+    printf("The Largest Number is :%d", big);
+    return 0;
+}
+
+Output 
+
+Write the Number for a b & c 
+12
+13
+14
+The Largest Number is :13
+
+NESTED IF STATEMENTS ---------------------------------------------------------------------------------------------------------------------------
+
+The if statement may contain one or more if statements. In such a case, they are said to be nested. An example of a nested if statement is shown below.
+
+if condition-1
+{
+  if condition-2 
+  {
+       statement - 1;
+  }
+  else 
+  {
+       statement - 2;
+  }
+  
+}
+else
+{
+       statement 3;
+}
+
+If the condition-1 is true then the condition-2 is checked. If Condition-2 is true then statement-1 is executed, 
+otherwise statement-2 is executed. if condition-1 is false, statement 3 is executed.
+
+Example 1.0
+
+#include<stdio.h>
+int main(){
+    float a,b,c,big;
+    printf("Enter three numbers \n");
+    scanf("%f%f%f", &a,&b,&c);
+    
+    if (a>b)
+    {
+        if(a>c) big = a; else big = c;
+    }
+    else 
+    {
+        if(b>c) big = b; else big = c;
+    }
+    printf("Largest number is : %6.2f \n", big);
+    return 0;
+}
+
+Output 
+
+Enter three numbers 
+76
+54
+67
+Largest number is :  76.00 
+
+Write a Program using nested if statement ----------------------------------------------------------------------------------------------
+
+Program 
+
+#include<stdio.h>
+int main(){
+    int bp, hra;
+    printf("Enter the basic payment :");
+    scanf("%d", &bp);
+    
+    if(bp <=2000) hra = 200;
+    else {
+        if(bp <=4000) hra = 350;
+        else
+           hra = 500;
+    }
+    printf("HRA is : %d", hra);
+    return 0;
+}
+
+Output 
+
+Enter the basic payment :1300
+HRA is : 200
 
   
