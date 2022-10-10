@@ -171,3 +171,28 @@ The circumference of the circle: 12.56
 The area of the circle: 12.56
 The circumference of the circle: 12.56
 
+Q6 Two numbers are input through the keyboard into two locations C and D. Write a program to interchange the contents of C and D.
+
+#include<stdio.h>
+int main(){
+    int C,D;
+    printf("Enter the Number for C : ");
+    scanf("%d", &C);
+    printf("Enter the Number for D : ");
+    scanf("%d", &D);
+    
+    C = C+D; //c=30, d=20
+    D = C-D; //d=10, c=30
+    C = C-D; //c=20
+    
+    printf("\n The value of C: %d", C);
+    printf("\n The value of D: %d", D);
+    return 0;
+}
+
+Output 
+
+Enter the Number for C : 12
+Enter the Number for D : 6
+The value of C: 6
+The value of D: 12
