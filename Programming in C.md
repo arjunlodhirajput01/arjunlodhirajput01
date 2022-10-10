@@ -126,43 +126,47 @@ The Temperature in Centigrade Degree: 36.67
 Q5. The length & breath of a rectangle and radius of circle are input through the keyboard. Write a program to caluclate the area & perimeter of the rectangle, and the area & circumference of the circle.
 
 #include<stdio.h>
-int main()
-{
-    float l, b, r,ca, cc, ra, rp;
-
-    //For rectangle
-    printf("Enter the length of rectangle: ");
-    scanf("%f", &l);
-    printf("Enter the breadth of rectangle: ");
-    scanf("%f", &b);
-
-    //For circle
-    printf("Enter the radius of circle: ");
-    scanf("%f", &r);
-
+int main(){
+    float lenght, breadth, radius, area_circle, circumference_circle, perimeter_rectangle, area_rectangle;
+    
+    //for rectangle
+    printf("Write length of rectanlge : ");
+    scanf("%f", &lenght);
+    
+    printf("Write breadth of rectangle : ");
+    scanf("%f", &breadth);
+    
+    //for circle
+    printf("Write Radius of Circle : ");
+    scanf("%f", &radius);
+    
+    
     //Calculate area & perimeter of the rectangle...
-     ra = l * b;    //Area of Rectangle = Length x Breadth
-     rp = 2 * (l + b);    //Perimeter of Rectangle = 2 x (Length + Breadth) or addition of all sides
-
-     //Calculate are & circumference of the circle...
-     ca = 3.14 * r * r;   //Area of Circle = 2 x Pi x r^2 where Pi = 3.14
-     cc = 2 * 3.14 * r;  //Circumference of Circle = 2 x Pi x r
-
-     printf("\nThe area of the rectangle: %0.2f", ra);
-     printf("\nThe perimeter of the rectangle: %.2f", rp);
-     printf("\n\nThe area of the circle: %.2f", ca);
-     printf("\nThe circumference of the circle: %.2f", cc);
-
-     return (0);
+    area_rectangle = lenght * breadth; //Area of Rectangle = Length x Breadth
+    perimeter_rectangle = 2 * (lenght + breadth); //Perimeter of Rectangle = 2 x (Length + Breadth) or addition of all sides
+    
+    //Calculate are & circumference of the circle...
+    area_circle = 3.14 * radius * radius; //Area of Circle = 2 x Pi x r^2 where Pi = 3.14
+    circumference_circle = 2 * 3.14 * radius; //Circumference of Circle = 2 x Pi x r
+    
+    printf("\nThe area of the rectangle: %0.2f", area_rectangle);
+    printf("\nThe perimeter of the rectangle: %.2f", perimeter_rectangle);
+    printf("\n\nThe area of the circle: %.2f", area_circle);
+    printf("\nThe circumference of the circle: %.2f", circumference_circle);
+    
+    return 0;
 }
 
 Output 
 
-Enter the length of rectangle: 3
-Enter the breadth of rectangle: 2
-Enter the radius of circle: 2
+Write length of rectanlge : 3
+Write breadth of rectangle : 2
+Write Radius of Circle : 2
 The area of the rectangle: 6.00
 The perimeter of the rectangle: 10.00
+
+The area of the circle: 12.56
+The circumference of the circle: 12.56
 
 The area of the circle: 12.56
 The circumference of the circle: 12.56
