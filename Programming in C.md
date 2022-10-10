@@ -127,7 +127,7 @@ Q5. The length & breath of a rectangle and radius of circle are input through th
 
 #include<stdio.h>
 int main(){
-    float lenght, breadth, radius, area_circle, circumference_circle, perimeter_rectangle, area_rectangle;
+    float lenght, breadth, radius, area_rectangle, perimeter_rectangle, area_circle, circumference_circle;
     
     //for rectangle
     printf("Write length of rectanlge : ");
