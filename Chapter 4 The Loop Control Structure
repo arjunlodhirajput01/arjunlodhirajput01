@@ -268,3 +268,181 @@ Enter 5 numbers
 Average is :  30.00
 
 Solution 12 :
+
+// The program to check whether a given number is prime or not.
+#include<stdio.h>
+int main()
+{
+    int n,i;
+    printf("Enter a number.");
+    scanf("%d", &n);
+    i=2;
+    while(i<=n/2)
+    {
+        if(n%i==0)
+        {
+            printf("is not a prime number. ");
+            goto end;
+        }
+        i++;
+    }
+    printf("is prime number."); 
+    end:
+}
+
+Output: 
+/tmp/uhQTVB0Hzm.o
+Enter a number.6
+is not a prime number. 
+
+Solution 13. 
+// The problem of example can be solved without using goto statment. For it assume that flag is a boolean variable. The vairable flag keeps track of whether a factor has been found or not.
+
+#include<stdio.h>
+int main()
+{
+    int n,i,flag=0;
+    printf("Enter a number : ");
+    scanf("%d", &n);
+    i=2;
+    while(i<=n/2)
+    {
+        if(n%i==0) 
+        flag = 1;
+        i++;
+    }
+    if(flag==0)
+    printf("prime number.");
+    else 
+    printf("is not prime numbe.");
+}
+
+Output : /tmp/uhQTVB0Hzm.o
+Enter a number : 56
+is not prime numbe.
+
+Solution 14:
+// Write a program to calculate sum of series upto n terms/ Series. 
+
+#include<stdio.h>
+int main()
+{
+    float term,sum,x;
+    int n,i,fact=1;
+    printf("Enter the value of x.");
+    scanf("%f", &x);
+    printf("Enter the number of terms.");
+    scanf("%d", &n);
+    term=x;
+    sum=x;
+    for(i=1; i<=n-1; i++)
+    {
+        term *= x*x;
+        fact *= (2*i+1)*(2*i);
+        sum += term/fact;
+    }
+    printf("The Sum of Series is %f", sum);
+}
+
+Output: /tmp/uhQTVB0Hzm.o
+Enter the value of x.0.5
+Enter the number of terms.4
+The Sum of Series is 0.521095
+
+Solution 15:
+// Write a program to check if a given number is a palindrome. 
+// A palndrome is a string or number which resukts in the same string or number when read from either direction ( left to right). The logic used, in this example, is to reverse the number and check if the reversed number is equal to the original number.
+
+#include<stdio.h>
+int main()
+{
+    int num,digit,temp,rnum=0;
+    printf("Enter a integer number :");
+    scanf("%d", &num);
+    temp=num;
+    do 
+    {
+        digit=temp%10;
+        temp=(temp/10);
+        rnum = rnum*10+digit;
+    }
+    while(temp>0);
+    {
+        if(rnum == num)
+        printf("Palindrome");
+        else
+        printf("The number is not a palindrome");
+    }
+}
+
+Output: /tmp/uhQTVB0Hzm.o
+Enter a integer number :12324
+The number is not a palindrome
+
+Solution 16: 
+// Write a program to print the following using nested loops.
+
+#include<stdio.h>
+int main()
+{
+    int row, plus;
+    printf("\n*\n");
+    for(row=1;row<=5; row++)
+    {
+        printf("*");
+        for(plus=1; plus<=row; plus++)
+        printf("+");
+        printf("\n");
+    }
+}
+
+Output: /tmp/uhQTVB0Hzm.o
+*
+*+
+*++
+*+++
+*++++
+*+++++
+
+Solution 17:
+
+// Write a program to find the H.C.F anf L.C.M. of two given numbers.
+
+// Write a program to find the H.C.F and L.C.M. of two given numbers.
+
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+    int a,b,HCF,LCM,rem,num,den;
+    printf("Enter two numbers : ");
+    scanf("%d%d",&a,&b);
+    if(a>b){
+    num = a;
+    den = b;
+    }
+    else{
+        num = b;
+        den = a;
+    }
+    rem = num % den;
+    while(rem != 0)
+    {
+    num = den;
+    den = rem;
+    rem = num % den;
+    }
+    HCF = den;
+    LCM = (a*b)/HCF;
+    printf("HCF%d,LCM%d", HCF, LCM);
+}
+
+Output : /tmp/uhQTVB0Hzm.o
+Enter two numbers : 14
+21
+HCF7,LCM42
+
+
+
+
